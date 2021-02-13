@@ -26,18 +26,18 @@
     var numarbutoane = prompt("Please introduce the number of buttons you want the game to have!");
     function addButtons() {
       for (var i = 0; i < numarbutoane; i++) {
-        $('#buttons').append(`<button type="button" class="btn btn-primary" id=`+ i +` onclick="guessing(this.id)">`+ i +`</button>`);
+        $('#buttons').append(`<button type="button" class="btn btn-primary" id=`+ i +` onclick="return guessing(this.id)">`+ i +`</button>`);
       }
       return false;
     }
+    var nrbutton = Math.floor(Math.random() * numarbutoane);
     function guessing(idbutton) {
-      var nrbutton = Math.floor(Math.random() * numarbutoane);
       if (idbutton == nrbutton) {
-        alert("Congratulations. You guessed the correct button.");
+        alert("Congratulations. You guessed the correct button. To play again press F5.");
       } else {
-        alert("Sorry, you choose the wrong button. The correct button is " + nrbutton + " Press F5 to play again");
+        alert("Sorry, this is not the correct button. Keep looking for the right one :)");
       }
-
+      return false;
     }
   </script>
 </html>
