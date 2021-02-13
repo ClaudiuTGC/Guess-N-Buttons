@@ -33,7 +33,8 @@
     var nrbutton = Math.floor(Math.random() * numarbutoane);
     function guessing(idbutton) {
       if (idbutton == nrbutton) {
-        alert("Congratulations. You guessed the correct button. To play again press F5.");
+        alert("Congratulations. You guessed the correct button. Now the game will restart so you can play again :)");
+        location.reload();
       } else {
         alert("Sorry, this is not the correct button. Keep looking for the right one :)");
       }
